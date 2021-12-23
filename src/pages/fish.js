@@ -1,6 +1,7 @@
 import * as React from "react"
 import  { graphql} from "gatsby"
 import Layout from "../components/layout"
+import Seo from "../components/seo"
 
 
 
@@ -8,6 +9,7 @@ const fishList = ({data}) => {
 
     return (
         <Layout>
+          <Seo title="Fish Index" />
 
         <h1>Fish</h1>
             <ul>

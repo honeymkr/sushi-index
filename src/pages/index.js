@@ -1,5 +1,4 @@
 import * as React from "react"
-import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
@@ -20,11 +19,7 @@ const IndexPage = () => (
       alt="A Gatsby astronaut"
       style={{ marginBottom: `1.45rem` }}
     />
-    <p>
-      <Link to="/fish/">Sushi Index</Link> <br />
-      <Link to="/quiz/">Test your Sushi knowledge</Link> <br />
-      <Link to="/about">More about us!</Link> <br />
-    </p>
+
   </Layout>
 )
 

@@ -10,7 +10,9 @@ const IndexPage = () => (
     <Layout>
         <Seo title="Quiz" />
 
-<h1>Quiz Time!</h1><p>Click here to begin.</p>
+<h1>Quiz Time!</h1>
+
+<p>Click here to begin.</p>
 
     </Layout>
 

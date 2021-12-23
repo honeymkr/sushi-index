@@ -32,8 +32,8 @@ const Header = ({ siteTitle }) => (
 <nav>
   <ul>
     <li> <Link to="/learn" >LEARN </Link>  </li>
-    <li> <link to="/quiz">QUIZ</link> </li>
-    <li> <link to="/about">ABOUT</link> </li>
+    <li> <Link to="/quiz">QUIZ</Link> </li>
+    <li> <Link to="/about">ABOUT</Link> </li>
 
   </ul>
 </nav>

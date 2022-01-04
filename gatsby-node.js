@@ -9,6 +9,9 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
           commonName
           allergies
           whatToLookFor
+          fishImages {
+            gatsbyImageData
+          }
         }
       }
     }
@@ -28,60 +31,3 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
     })
   })
 }
-
-
-
-
-
-
-//
-//
-//exports.createPages = async ({ actions: {createPage}, graphql }) => {
-//
-//const results = await graphql(`
-//{
-//  allContentfulSushiFish {
-//    edges {
-//      node {
-//        id
-//        fishName
-//        commonName
-//        allergies
-//      }
-//    }
-//  }
-//}
-//`)
-//
-//results.data.allContentfulSushiFish.edges.forEach(edge => {
-//
-//  const sushi = edge.node
-//
-//  createPage({
-//    path: `/gql/${sushi.slug}/`,
-//    component: require.resolve("./src/templates/sushi-fish.js"),
-//    context: {
-//      slug: sushi.slug,
-//    }
-//  })
-//})
-//}
-
-
-
-
-
-/*
-
-exports.createPages = async ({ actions }) => {
-  const { createPage } = actions
-  createPage({
-    path: "/using-dsg",
-    component: require.resolve("./src/templates/using-dsg.js"),
-    context: {},
-    defer: true,
-  })
-}
-
-
-*/

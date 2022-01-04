@@ -18,7 +18,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     // `gatsby-plugin-material-ui`,
-    `gatsby-plugin-styled-components`,
+    //`gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

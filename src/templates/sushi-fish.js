@@ -1,33 +1,56 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 
-
-// THE SUSHI FUSH COMPONENT FOR MAKING PAGES ETC
+// THE SUSHI FISH COMPONENT FOR MAKING PAGES ETC
  
  export const query = graphql`
-    query ($id: String){
-      contentfulSushiFish(id: {eq: $id }) {
-        fishName
-        commonName
-        allergies
-        whatToLookFor
+ query ($id: String) {
+  contentfulSushiFish(id: {eq: $id}) {
+    fishName
+    commonName
+    allergies
+    whatToLookFor
+    fishImages {
+      gatsbyImageData(layout: CONSTRAINED, width: 125 )
+      file {
+        url
+        fileName
+        contentType
       }
-    }`
+    }
+  }
+}`
 
 const Sushi = ({ data }) => {
+
   const sushi = data.contentfulSushiFish;
-  
+
   return (
-    <Layout>
-      <h1>{sushi.fishName}</h1>
-      <h2>{sushi.commonName}</h2>
-      <h4>{sushi.id}</h4>
+<Layout>
+<Link to="/fish">BACK</Link>
+<table>
+<tbody>
 
+  <tr>
+    <th><GatsbyImage image={data.contentfulSushiFish.fishImages[0].gatsbyImageData} alt={'alt text'} /></th>
+    <th>Common Name</th>
+    <th>Japanese Name</th>
+    <th>What to Look For</th>
+    <th>Allergy</th>
+  </tr>
+  <tr>
+    <td>Nada</td>
+    <td>{sushi.commonName}</td>
+    <td>{sushi.fishName}</td>
+    <td>{sushi.whatToLookFor}</td>
+    <td> <div dangerouslySetInnerHTML={{ __html: sushi.allergies }} /> </td>
+  </tr>
 
-      <p>{sushi.whatToLookFor}</p>
-      <div dangerouslySetInnerHTML={{ __html: sushi.allergies }} />
-
+  </tbody>
+</table> 
+  
 
     </Layout>
   )

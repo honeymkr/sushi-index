@@ -34,14 +34,14 @@ const Sushi = ({ data }) => {
 <tbody>
 
   <tr>
-    <th><GatsbyImage image={data.contentfulSushiFish.fishImages[0].gatsbyImageData} alt={'alt text'} /></th>
+    <th>Photo(s)</th>
     <th>Common Name</th>
     <th>Japanese Name</th>
     <th>What to Look For</th>
     <th>Allergy</th>
   </tr>
   <tr>
-    <td>Nada</td>
+    <td><GatsbyImage image={data.contentfulSushiFish.fishImages[0].gatsbyImageData} alt={'alt text'} /></td>
     <td>{sushi.commonName}</td>
     <td>{sushi.fishName}</td>
     <td>{sushi.whatToLookFor}</td>

@@ -2,28 +2,27 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import styled from "styled-components"
+import { Container, Grid } from "@mui/material"
 
 const NavLink = styled.li`
 float:left;
 padding:2rem;
-text-decoration:none;
 `
 
 const Header = ({ siteTitle }) => (
-  <header
+
+ <header
     style={{
-      background: `rebeccapurple`,
+      background: `orangered`,
       marginBottom: `1.45rem`,
     }}
   >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
+   
+
+      <Grid container spacing={3}>
+
+        <Grid item xs={6}> 
+          <h1 style={{ margin: 22 }}>
         <Link
           to="/"
           style={{
@@ -33,23 +32,31 @@ const Header = ({ siteTitle }) => (
         >
           {siteTitle}
         </Link>
-      </h1>
-    </div>
+      </h1></Grid>
 
-<nav
-style={{
-  float: `right`,
-  padding: `.5rem`,
-  marginBottom: `1.45rem`,
-}}
->
-  <ul>
-    <NavLink> <Link to="/fish" >LEARN </Link>  </NavLink>
-    <NavLink> <Link to="/quiz">QUIZ</Link> </NavLink>
-    <NavLink> <Link to="/about">ABOUT</Link> </NavLink>
-
+        <Grid item xs={6}>
+<ul>
+    <NavLink> <Link to="/fish" style={{
+            color: `white`,
+            textDecoration: `none`,
+          }}>LEARN </Link>  </NavLink>
+    <NavLink> <Link to="/quiz" style={{
+            color: `white`,
+            textDecoration: `none`,
+          }}
+    >QUIZ</Link> </NavLink>
+    <NavLink> <Link to="/about" style={{
+            color: `white`,
+            textDecoration: `none`,
+          }}>ABOUT</Link> </NavLink>
   </ul>
-</nav>
+        </Grid>
+       
+      </Grid>
+      
+
+
+
 
     
   </header>

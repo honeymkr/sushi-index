@@ -15,7 +15,10 @@ const fishList = ({data}) => {
             <ul>
                    { data.allContentfulSushiFish.edges.map( ({ node, index }) => (
                     <li key={node.id} >
-                       <a href={ `/fish/` + node.fishName} alt="fishy"> {node.fishName }</a>
+                       <a href={ `/fish/` + node.fishName} alt="fishy"
+                       style={{ 
+                         color: `black`,    textDecoration: `none`,
+                       }}> {node.fishName }</a>
                    </li> 
                    )) }
             </ul>

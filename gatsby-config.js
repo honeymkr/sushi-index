@@ -1,10 +1,8 @@
 const dotenv = require('dotenv')
-/*require("dotenv").config()*/
 
 if (process.env.NODE_ENV !== 'production') {
   dotenv.config()
 }
-
 
 module.exports = {
 
@@ -17,7 +15,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
-    // `gatsby-plugin-material-ui`,
+    `gatsby-plugin-material-ui`,
     //`gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -49,13 +47,8 @@ module.exports = {
       options: {
         spaceId: process.env.CONTENTFUL_SPACEID,
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-       // host: `preview.contentful.com`,
       },
     },
-
-
-
-
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

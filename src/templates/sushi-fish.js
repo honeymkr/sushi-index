@@ -1,7 +1,8 @@
 import React from "react"
 import { GatsbyImage} from "gatsby-plugin-image"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import { Button } from "@mui/material"
 
 // THE SUSHI FISH COMPONENT FOR MAKING PAGES ETC
  
@@ -29,7 +30,7 @@ const Sushi = ({ data }) => {
 
   return (
 <Layout>
-<Link to="/fish">BACK</Link>
+<Button variant="text" href="/fish/">Back</Button>
 <table>
 <tbody>
 

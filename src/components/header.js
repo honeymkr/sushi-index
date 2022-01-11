@@ -2,7 +2,7 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import { Container, Grid } from "@mui/material"
+import { Grid } from "@mui/material"
 
 const NavLink = styled.li`
 float:left;
@@ -21,7 +21,7 @@ const Header = ({ siteTitle }) => (
 
       <Grid container spacing={3}>
 
-        <Grid item xs={6}> 
+        <Grid item xs={6}  sm={6}> 
           <h1 style={{ margin: 22 }}>
         <Link
           to="/"
@@ -34,7 +34,7 @@ const Header = ({ siteTitle }) => (
         </Link>
       </h1></Grid>
 
-        <Grid item xs={6}>
+        <Grid item xs={6} sm={6}  >
 <ul>
     <NavLink> <Link to="/fish" style={{
             color: `white`,

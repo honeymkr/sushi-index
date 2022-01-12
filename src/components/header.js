@@ -21,7 +21,7 @@ const Header = ({ siteTitle }) => (
 
       <Grid container spacing={3}>
 
-        <Grid item xs={6}  sm={6}> 
+        <Grid item xs={12}  md={6}> 
           <h1 style={{ margin: 22 }}>
         <Link
           to="/"
@@ -34,7 +34,7 @@ const Header = ({ siteTitle }) => (
         </Link>
       </h1></Grid>
 
-        <Grid item xs={6} sm={6}  >
+        <Grid item xs={12} md={6}  >
 <ul>
     <NavLink> <Link to="/fish" style={{
             color: `white`,
